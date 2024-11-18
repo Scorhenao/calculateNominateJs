@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Nomina</title>
+        <!--Link de boostrap-->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+            crossorigin="anonymous" />
+        <style>
+            body {
+                background-color: #cedceb;
+            }
+            textarea.auto-expand {
+                overflow: hidden; /* Oculta las barras de desplazamiento */
+                resize: none; /* Evita que el usuario cambie el tamaño manualmente */
+                transition: height 0.2s ease; /* Animación suave al cambiar la altura */
+            }
+        </style>
+    </head>
+    <!-- Contenedor general de la pagina -->
+    <body>
+        <!-- Contenedor de la barra de navegacion -->
+        <header>
+            <nav class="bg-black"> 
+                <ul class="nav justify-content-center">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="./vistaDeEmpleados.html">Ver empleados</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <!-- Seccion de formulario -->
+        <Section class="container-fluid text-center p-4">
+            <!-- Titulo de pagina -->
+            <h1>Formulario de datos de empleado</h1>
+            <!-- Contenedor de formulario -->
+            <form>
+                <!-- Contenedor de input de Nombre  -->
+                <div class="mb-3">
+                    <label for="Nombre" class="form-label">Ingrese su nombre</label>
+                    <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Ingrese su nombre: "
+                        id="Nombre" />
+                </div>
+                <!-- Contenedor de input de Seguro  -->
+                <div class="mb-3">
+                    <label for="Seguro" class="form-label">Ingrese su seguro</label>
+                    <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Ingrese su seguro: "
+                        id="Seguro" />
+                </div>
+                <!-- Contenedor de input de Enfermedades  -->
+                <div class="mb-3">
+                    <label for="Enfermedades" class="form-label">Ingrese sus enfermedades</label>
+                    <div class="form-floating">
+                        <textarea
+                            class="form-control h-100"
+                            placeholder="Leave a comment here"
+                            id="Enfermedades"></textarea>
+                        <label for="Enfermedades">Ingrese sus enfermedades sino N/A</label>
+                    </div>
+                </div>
+                <!-- Contenedor de select de ARL  -->
+                <div class="mb-3">
+                    <label for="Arl" class="form-label">Ingrese su ARL</label>
+                    <select
+                        class="form-select form-select-sm"
+                        aria-label="Small select example"
+                        id="Arl">
+                        <option selected>Seleccione su ARL</option>
+                        <option value="SURA">SURA</option>
+                        <option value="SEGUROS BOLIVAR">SEGUROS BOLIVAR</option>
+                        <option value="SEGUROS DE VIDA AURORA">SEGUROS DE VIDA AURORA</option>
+                        <option value="MAPFRE COLOMBIA VIDA SEGUROS">MAPFRE COLOMBIA VIDA SEGUROS</option>
+                        <option value="SEGUROS DE VIDA COLPATRIA">SEGUROS DE VIDA COLPATRIA</option>
+                        <option value="SEGUROS DE VIDA ALFA">SEGUROS DE VIDA ALFA</option>
+                    </select>
+                </div>
+                <!-- Contenedor de input de Salario -->
+                <div class="mb-3">
+                    <label for="Salario" class="form-label">Ingrese su salario</label>
+                    <input
+                        type="number"
+                        class="form-control"
+                        placeholder="Ingrese su salario: "
+                        id="Salario" />
+                </div>
+                <!-- Horas trabajadas -->
+                <div class="mb-3">
+                    <label for="HorasTrabajadas" class="form-label">Ingrese sus horas trabajadas</label>
+                    <input
+                        type="number"
+                        class="form-control"
+                        placeholder="Ingrese sus horas trabajadas: "
+                        id="HorasTrabajadas" />
+                </div>
+                <!-- Horas extra trabajadas de dia -->
+                <div class="mb-3">
+                    <label for="HorasExtraTrabajadasDeDia" class="form-label">Ingrese sus horas extra trabajadas de dia</label>
+                    <input
+                        type="number"
+                        class="form-control"
+                        placeholder="Ingrese sus horas trabajadas de dia: "
+                        id="HorasExtraTrabajadasDeDia" />
+                </div>
+                <!-- Horas extra trabajadas de noche -->
+                <div class="mb-3">
+                    <label for="HorasExtraTrabajadasDeNoche" class="form-label">Ingrese sus horas extra trabajadas de noche</label>
+                    <input
+                        type="number"
+                        class="form-control"
+                        placeholder="Ingrese sus horas trabajadas de noche: "
+                        id="HorasExtraTrabajadasDeNoche" />
+                </div>
+                <!-- Contenedor de checkbox de cabeza de familia -->
+                <div class="mb-3 form-check">
+                    <label class="form-check-label" for="CabezaFamilia">Cabeza de familia</label>
+                    <input type="checkbox" name="CabezaFamilia" id="CabezaFamilia">
+                </div>
+    
+                <!-- Boton de Submit de enviar -->
+                <button type="submit" id="Enviar" class="btn btn-primary w-50">Enviar</button>
+            </form>
+        </Section>
+        <!-- Link de boostrap -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"></script>
+        <!-- Link de SweetAlert -->
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <!-- Link de SweetAlert -->
+        <script src="./alerts.js"></script>
+        <!-- Link de form.js -->
+        <script src="./form.js"></script>
+        <!-- link de validacionDeInputs.js -->
+        <script src="./validacionDeInputs.js"></script>
+    </body>
+</html>
