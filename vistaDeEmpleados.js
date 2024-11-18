@@ -4,7 +4,7 @@ if (TodosLosEmpleadosGuardados) {
     TodosLosEmpleadosGuardados = JSON.parse(TodosLosEmpleadosGuardados);
 } else {
     TodosLosEmpleadosGuardados = []; // Inicializar como un array vacío
-    alert("¡NO HAY EMPLEADOS GUARDADOS HP!");
+    alert("¡No hay empleados guardados!");
 }
 
 // formatear moneda a pesos colombianos 
